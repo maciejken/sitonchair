@@ -8,13 +8,14 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 900px;
+    width: 910px;
 /*    border: 0.5px solid #f06;*/
 }
 
 header {
     background-color: #000;
     color: #fff;
+    font-size: 12px;
 }
 
 .logo {
@@ -47,18 +48,26 @@ header {
     display: none;
     position: absolute;
     left: 30px;
-    top: 50px;
+    top: 45px;
     list-style-type: none;
     font-family: ralewaylight;
     
 }
 
-.dropdown li {
+.dropdown>li {
     background-color: #000;
     display: inherit;
-    padding: 5px 10px 5px;
-    line-height: 18px;
-    font-size: 14px;
+    padding: 0 10px 0;
+    line-height: 20px;
+/*    height: 20px;*/
+}
+
+.dropdown>li:first-child {
+    padding-top: 5px;
+}
+
+.dropdown>li:last-child {
+    padding-bottom: 5px;
 }
 
 /* black arrow in the form of a triangle, it would be rather nice
@@ -68,20 +77,20 @@ li:hover > .dropdown::before {
     content: '';
     height: 0;
     width: 0;
-    border-top: 10px solid transparent;
-    border-left: 10px solid transparent;
-    border-bottom: 10px solid black;
-    border-right: 10px solid transparent;
+    border-top: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 9px solid black;
+    border-right: 9px solid transparent;
     position: absolute;
-    top: -20px;
-    left: 40px;
+    top: -18px;
+    left: 30px;
 }
 
 li:hover > .dropdown {
     display: block;
 }
 
-.section1 {
+#section1 {
     background-image: linear-gradient(#fff, rgba(0, 0, 0, .15));
     padding: 67px 0 0 0;
 }
@@ -137,6 +146,7 @@ li:hover > .dropdown {
 
 .text h1 {
     font-size: 36px;
+    margin: 5px;
 }
 
 .text span {
@@ -145,16 +155,18 @@ li:hover > .dropdown {
 }
 
 .text p {
-    margin: 20px 0 30px;
-    font-size: 14px;
+    margin: 20px 0 20px;
+    font-size: 12px;
     line-height: 20px;
 }
 
 .text a {
     display: block;
+    margin: 50px;
     width: 200px;
     margin: 20px auto;
     color: white;
+    font-size: 18px;
     background-color: #4BC3A9;
     text-decoration: none;
     padding: 10px 20px;
@@ -164,4 +176,59 @@ li:hover > .dropdown {
 
 .text a:hover {
     background-color: #2F8E83;
+}
+
+#section2 {
+    background-color: #fff;
+    height: 290px;
+}
+
+#chairclair, #chairmarg {
+    margin: 20px 0 0 0;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+
+}
+
+#chairclair img, #chairmarg img {
+    width: 285px;
+}
+
+#chairclair span, #chairmarg span, #findsall span {
+    font-family: ralewayextrabold;
+    color: #000;
+    border-bottom: 5px solid #4BC3A9;
+    font-size: 14px;
+}
+
+figcaption {
+    position: absolute;
+    display: block;
+    width: 285px;
+    background-color: rgba(255,255,255,.3);
+    top: 130px;    
+    padding: 10px 10px 20px 15px;
+}
+
+#findsall {
+    margin: 20px 0 20px 0;
+    float: right;
+    border: 1.5px solid #ddd;
+    width: 300px;
+    height: 215px;
+    padding: 20px;
+    text-align: left;
+}
+
+#findsall p {
+    padding: 0;
+    margin: 15px 0 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#section3 {
+    background-color: #ddd;
+    height: 600px;
 }
