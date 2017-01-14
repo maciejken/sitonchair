@@ -29,6 +29,7 @@ header {
 .menu {
     float: right;
     padding: 10px 0 10px;
+    position: relative;
 }
 
 .menu li {
@@ -41,3 +42,37 @@ header {
     text-decoration: none;
 }
 
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    list-style-type: none;
+    
+}
+
+.dropdown li {
+    background-color: #000;
+    display: inherit;
+    padding: 5px 10px 5px;
+}
+
+/* black arrow in the form of a triangle, it would be rather nice
+to make it disappear with a delay (css transitions??) so that it's
+easier for the user to click on the dropdown menu */
+li:hover > .dropdown::before {
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid black;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -20px;
+    left: 40px;
+}
+
+li:hover > .dropdown {
+    display: block;
+}
