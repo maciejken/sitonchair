@@ -108,6 +108,10 @@ li:hover > .dropdown {
     font-size: 76px;
 }
 
+.prev:hover, .next:hover {
+    color: #2F8E83;
+}
+
 .next {
     float: right;
 }
@@ -155,4 +159,9 @@ li:hover > .dropdown {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 7px;
+    
+}
+
+.text a:hover {
+    background-color: #2F8E83;
 }
