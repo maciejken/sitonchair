@@ -74,10 +74,10 @@ li:hover > .dropdown::before {
     content: '';
     height: 0;
     width: 0;
-    border-top: 8px solid transparent;
-    border-left: 8px solid transparent;
-    border-bottom: 8px solid black;
-    border-right: 8px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid black;
+    border-right: 10px solid transparent;
     position: absolute;
     top: -16px;
     left: 30px;
@@ -265,13 +265,21 @@ figcaption {
     background: #f7f2f2;
 }
 
+.box:hover {
+    border: 2px solid #4BC3A9;
+    background-color: #4BC3A9;
+}
+
 .box h3 {
     color: #4BC3A9;
     font-size: 18px;
-/*    font-family: ralewaymedium;*/
 }
 
-.basic a, .standard a, .advance a {
+.box:hover h3 {
+    color: #fff;
+}
+
+.box a {
     display: block;
     width: 110px;
     border-radius: 7px;
@@ -286,6 +294,11 @@ figcaption {
     line-height: 30px;
     text-align: center;
     text-decoration: none;
+}
+
+.box:hover a {
+    color: #4BC3A9;
+    background-color: #fff;
 }
 
 .circle, .dot {
@@ -303,13 +316,23 @@ figcaption {
     background: #fcf7f7;
 }
 
+.box:hover .circle {
+    background-color: #4BC3A9;
+    border: 2px solid #4BC3A9;
+}
+
 .dot {
     width: 22px;
     height: 22px;
     background-color: #aaa;
     border-radius: 50% 50% 50% 50%;
-    top: 12px;
-    left: 12px;
+    top: 12.5px;
+    left: 12.5px;
+}
+
+.box:hover .dot {
+    background-color: #fff;
+    border: 2px solid #fff;
 }
 
 .price {
@@ -321,6 +344,11 @@ figcaption {
     background: #fff9f9;
     position: absolute;
     border-radius: 50%;
+}
+
+.box:hover .price {
+    color: #4BC3A9;
+    border: 2px solid #4BC3A9;
 }
 
 .price {
@@ -351,12 +379,24 @@ figcaption {
     font-size: 18px;
 }
 
-tr:nth-child(2n+1) {
+.box tr:nth-child(2n+1) {
     background-color: #d8d6d6;
     height: 30px;
     line-height: 30px;
 }
-tr:nth-child(2n) {
+.box tr:nth-child(2n) {
+    background-color: #efeded;
+    height: 30px;
+    line-height: 30px;
+}
+
+.box:hover tr:nth-child(2n+1) {
+    background-color: #f7f2f2;
+    height: 30px;
+    line-height: 30px;
+}
+
+.box:hover tr:nth-child(2n) {
     background-color: #efeded;
     height: 30px;
     line-height: 30px;
