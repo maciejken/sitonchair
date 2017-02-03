@@ -1,0 +1,16 @@
+@mixin clearfix
+    // zadanie 0.1
+    &:before, &:after
+        content: ''
+        display: table
+        clear: both
+
+@mixin placeholder
+    &::-webkit-input-placeholder
+        @content
+    &:-moz-placeholder
+        @content
+    &::-moz-placeholder
+        @content
+    &:-ms-input-placeholder
+        @content

@@ -1,0 +1,101 @@
+#section4
+    height: 200px
+    padding: 30px 0 30px
+
+
+#section4 #kontakt
+    margin: 0 0 20px
+
+
+
+#section4 .box1, #section4 .box2
+    float: left
+
+
+#section4 .box1
+    width: 500px
+    margin-right: 30px
+
+
+#section4 .box2
+    width: 200px
+
+
+.box1 input, .box1 textarea
+    display: block
+    width: 485px
+    height: 40px
+    margin: 15px 0
+    border: 1px solid #4BC3A9
+    border: 1px solid rgba(75,195,169,.75)
+    padding: 7px
+    font-size: 20px
+    font-family: ralewaymedium
+
+
+.box1 textarea
+    height: 100px
+    resize: none
+
+input[type=text], input[type=email], textarea
+    @include placeholder
+        font-family: ralewaylight
+        font-size: 20px
+
+
+.box2 img
+    height: 120px
+    margin: 0 10px 10px
+
+
+.box2 label
+    display: table
+    margin: 7px 0
+
+
+.box2 label span.zgoda
+    display: table-cell
+    padding: 2px 7px
+    font-size: 11px
+    color: #999
+    text-align: left
+
+
+input[type=checkbox]
+    display: none
+
+
+input[type=checkbox] + label span.tick
+    display: table-cell
+    width: 29px
+    height: 27px
+    vertical-align: middle
+    background: #fff
+    cursor: pointer
+    border: 1px solid #4BC3A9
+    border: 1px solid rgba(75,195,169,.75)
+
+
+input[type=checkbox]:checked + label span.tick
+    background-image: url('../images/form_ok.jpg')
+    -webkit-background-size: 25px
+    background-size: 25px
+    background-position: -1px 3px
+    background-repeat: no-repeat
+
+
+.box2 a
+    display: block
+    margin: 15px auto
+    color: white
+    font-size: 20px
+    font-size: ralewaysemibold
+    background-color: #4BC3A9
+    text-decoration: none
+    padding: 7px 20px
+    border-radius: 7px
+    text-align: center
+
+
+.box2 a:hover
+    background-color: #2F8E83

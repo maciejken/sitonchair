@@ -430,8 +430,8 @@ figcaption {
     width: 485px;
     height: 40px;
     margin: 15px 0;
+    border: 1px solid #4BC3A9;
     border: 1px solid rgba(75,195,169,.75);
-    border-color: #4BC3A9;
     padding: 7px;
     font-size: 20px;
     font-family: ralewaymedium;
@@ -496,6 +496,7 @@ input[type=checkbox] + label span.tick {
     background: #fff;
     cursor: pointer;
     border: 1px solid #4BC3A9;
+    border: 1px solid rgba(75,195,169,.75);
 }
 
 input[type=checkbox]:checked + label span.tick {
@@ -517,6 +518,10 @@ input[type=checkbox]:checked + label span.tick {
     padding: 7px 20px;
     border-radius: 7px;
     text-align: center;
+}
+
+.box2 a:hover {
+    background-color: #2F8E83;
 }
 
 footer {

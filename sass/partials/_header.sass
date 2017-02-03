@@ -1,0 +1,77 @@
+header
+    background-color: #000
+    color: #fff
+    font-size: 12px
+    font-family: ralewaysemibold
+
+
+header .logo
+    float: left
+    padding: 10px 0
+
+
+header .logo span
+    font-family: ralewayextrabold
+    color: #4BC3A9
+
+
+header nav
+    float: right
+    padding: 10px 0 10px
+    position: relative
+
+
+header nav li
+    display: inline-block
+    padding: 0 0 0 40px
+
+
+header nav li a
+    color: #fff
+    text-decoration: none
+
+
+header .dropdown
+    display: none
+    position: absolute
+    left: 30px
+    top: 43px
+    list-style-type: none
+    font-family: ralewaymedium
+
+
+
+header .dropdown > li
+    background-color: #000
+    display: inherit
+    padding: 0 10px 0
+    line-height: 20px
+/*    height: 20px*/
+
+
+header .dropdown > li:first-child
+    padding-top: 5px
+
+
+.dropdown>li:last-child
+    padding-bottom: 5px
+
+
+// black triangle on top of the dropdown menu: it would be rather nice
+// to make it disappear with a delay (css transitions??) so that it's
+// easier for the user to click on the dropdown smenu
+li:hover > .dropdown::before
+    content: ''
+    height: 0
+    width: 0
+    border-top: 12px solid transparent
+    border-left: 12px solid transparent
+    border-bottom: 12px solid black
+    border-right: 12px solid transparent
+    position: absolute
+    top: -20px
+    left: 30px
+
+
+li:hover > .dropdown
+    display: block
