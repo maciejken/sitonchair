@@ -3,6 +3,7 @@ header
     color: #fff
     font-size: 12px
     font-family: ralewaysemibold
+    @include unselectable
 
 
 header .logo
@@ -29,6 +30,9 @@ header nav li
 header nav li a
     color: #fff
     text-decoration: none
+
+    &:hover
+        text-shadow: 0 0 2px #000, 0 0 5px #fff
 
 
 header .dropdown
