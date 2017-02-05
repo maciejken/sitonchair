@@ -2,6 +2,39 @@
 document.addEventListener('DOMContentLoaded', function(){
     // console.log('* * * działa !! * * *');
 
+    // BANNER
+
+    var body = document.querySelector('body');
+    var fullscreen = document.createElement('div');
+    fullscreen.classList.add('fullscreen');
+    var banner = document.createElement('div');
+    banner.classList.add('banner');
+    var mainwidth = document.createElement('div');
+    mainwidth.classList.add('mainwidth');
+    var sweets = ['CAKE TOOTSIE', 'HALVAH COOKIE', 'GUMMIES CANDY', 'CANDY CANES'];
+    sweets.forEach(function(i){
+        var row = document.createElement('div');
+        var index = sweets.indexOf(i);
+        row.classList.add('row'+index);
+        var text = document.createElement('div');
+        text.innerHTML = i;
+        text.classList.add('text');
+        var image = document.createElement('div');
+        image.classList.add('image'+index);
+        row.appendChild(text);
+        row.appendChild(image);
+        mainwidth.appendChild(row);
+    });
+
+    banner.appendChild(mainwidth);
+    fullscreen.appendChild(banner);
+    body.appendChild(fullscreen);
+
+    fullscreen.addEventListener('click', function(){
+        body.removeChild(fullscreen);
+    });
+
+
     // SLIDER
 
     var section1 = document.querySelector('#section1');

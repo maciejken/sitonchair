@@ -1,0 +1,58 @@
+.fullscreen
+    position: fixed
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: 1
+    background: rgba(0,0,0,0.75)
+
+$bannerwidth: 600px
+$bannerheight: 250px
+.banner
+    border: 5px solid black
+    width: $bannerwidth
+    height: $bannerheight
+    background-color: #fff
+    margin: 100px auto
+    .mainwidth
+        width: $bannerwidth*0.8
+        margin: 0 auto
+        @include display(flex)
+        flex-flow: column
+
+        .row3
+            order: -1
+            // transform: translate(0, -$bannerheight*0.23)
+            // @include move(row3, 1, 0, 50)
+        .row0
+            // transform: translate(0, -$bannerheight*0.47)
+            // @include move(row0, 2, 1, 100)
+        .row2
+            // transform: translate(0, -$bannerheight*0.71)
+            // @include move(row2, 3, 3, 150)
+        .row1
+            order: 1
+            // transform: translate(0, -$bannerheight*0.95)
+            // @include move(row1, 4, 6, 200)
+
+
+    .mainwidth [class*=row]
+        width: 45%
+        margin: 5px auto
+        height: $bannerheight*0.2
+
+
+        .text
+            float: left
+            line-height: $bannerheight*0.20
+            font-weight: bold
+
+        [class*=image]
+            float: right
+            width: $bannerheight*0.20
+            height: $bannerheight*0.20
+            background-image: url('../images/sprite.png')
+            background-size: $bannerheight*0.8
+
+        @include images

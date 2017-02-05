@@ -21,3 +21,25 @@
     -ms-user-select: none
     -o-user-select: none
     user-select: none
+
+@mixin display($display)
+    display: -webkit-$display
+    display: -moz-$display
+    display: -ms-$display
+    display: -o-$display
+    display: $display
+
+@mixin images
+    @for $i from 0 to 4
+        .image#{$i}
+            background-position: $i*50px 50px
+
+// @mixin move($what, $duration, $delay, $Yend)
+//     animation: move#{$what} #{$duration}s #{$delay}s 1 linear normal
+//     -moz-animation: move#{$what} #{$duration}s #{$delay}s 1 linear normal
+//     -webkit-animation: move#{$what} #{$duration}s #{$delay}s 1 linear normal
+//     @keyframes move#{$what}
+//         0%
+//
+//         100%
+//             transform: translate(0, $Yend*1px)
