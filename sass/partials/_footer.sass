@@ -6,38 +6,41 @@ footer
     @include unselectable
     // background-color: darken(#fff, 10%)
 
+    .container
+        @include display(flex)
+        // justify-content: space-between
+        align-items: center
+        // border: 1px solid red
+
     .copyleft
-        float: left
-        width: 500px
-        margin: 0 30px 0 0
-        padding: 5px 0 0
+        // float: left
+        width: 530px
+        // margin: 0 3rem 0 0
+        // padding: 5px 0 0
 
         span
             display: block
             transform: rotate(180deg)
-            transform-origin: 0.45rem 0.77rem
-            padding: 1px 0 0 0
+            // transform-origin: 0.5rem 0.75rem
+            // padding: 1px 0 0 0
 
+    .right
+        // float: left
+        width: 350px
+        justify-content: space-between
 
-footer .right
-    float: left
-    width: 350px
-    justify-content: space-between
-
-footer .copyleft, footer .right
-    // margin-top: 20px
-    height: 4rem
-    @include display(flex)
-    align-items: center
-    // border: 1px solid red
-
-
+    .copyleft, .right
+        // margin-top: 20px
+        // height: 4rem
+        @include display(flex)
+        align-items: center
+        // border: 1px solid red
 
 footer .follow
-    float: left
+    // float: left
     @include display(flex)
     width: 15rem
-    height: 3.75rem
+    // height: 3.75rem
     justify-content: space-between
     // border: 1px solid red
 
@@ -62,14 +65,14 @@ footer
         background-position: -50px -50px
 
 
-footer .follow img
-    width: 21px
+// footer .follow img
+//     width: 21px
 
 
 footer .logo
-    float: right
+    // float: right
     font-family: ralewaysemibold
-    padding: 5px 0
+    // padding: 5px 0
     font-size: 2rem
 
 
