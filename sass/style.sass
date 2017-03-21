@@ -4,12 +4,21 @@
 
 @import 'modules/mixins'
 
+// breakpoints
+
+$mobile: 500px
+$tablet: 1000px
+
 body
     font-family: ralewaymedium, Arial, Verdana, sans-serif
 
 .container
     margin: 0 auto
     width: 910px
+
+@media screen and (min-width: $tablet)
+    html
+        font-size: 10px
 
 @import 'partials/banner'
 

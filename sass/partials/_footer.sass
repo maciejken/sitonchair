@@ -2,11 +2,10 @@ footer
     padding: 10px 0 30px
     color: #777
     font-family: ralewaysemibold
-    font-size: 10px
+    font-size: 1.25rem
     @include unselectable
+    // background-color: darken(#fff, 10%)
 
-
-footer
     .copyleft
         float: left
         width: 500px
@@ -14,25 +13,53 @@ footer
         padding: 5px 0 0
 
         span
-            display: inline-block
+            display: block
             transform: rotate(180deg)
-            font-size: 10px
+            transform-origin: 0.45rem 0.77rem
             padding: 1px 0 0 0
 
 
 footer .right
     float: left
-    width: 200px
-    height: 20px
-
+    width: 350px
+    justify-content: space-between
 
 footer .copyleft, footer .right
-    margin-top: 20px
+    // margin-top: 20px
+    height: 4rem
+    @include display(flex)
+    align-items: center
+    // border: 1px solid red
 
 
 
 footer .follow
     float: left
+    @include display(flex)
+    width: 15rem
+    height: 3.75rem
+    justify-content: space-between
+    // border: 1px solid red
+
+footer
+    .social
+        background-image: url(images/social_media.png)
+        background-repeat: no-repeat
+        display: block
+        width: 35px
+        height: 35px
+
+    .social-flickr
+        background-position: -5px -5px
+
+    .social-pinterest
+        background-position: -50px -5px
+
+    .social-twitter
+        background-position: -5px -50px
+
+    .social-vimeo
+        background-position: -50px -50px
 
 
 footer .follow img
@@ -43,7 +70,7 @@ footer .logo
     float: right
     font-family: ralewaysemibold
     padding: 5px 0
-    font-size: 12px
+    font-size: 2rem
 
 
 footer .logo span
