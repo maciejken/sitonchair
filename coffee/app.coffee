@@ -1,6 +1,6 @@
 
 document.addEventListener 'DOMContentLoaded', ->
-    console.log '* * * działa !! * * *'
+    # console.log '* * * działa !! * * *'
 
 #     // BANNER
 #
@@ -66,7 +66,7 @@ document.addEventListener 'DOMContentLoaded', ->
 
     # KALKULATOR
 
-    form = document.querySelector '.application .form'
+    form = document.querySelector '.kalkulator .form'
     dropDownLists = form.querySelectorAll '.drop_down_list'
     # arrows = form.querySelectorAll('.list_arrow');
     # łatwiej kliknąć w listę, niż w samą strzałkę
@@ -76,7 +76,7 @@ document.addEventListener 'DOMContentLoaded', ->
     transport = form.querySelector 'input#transport'
     totalSum = summary.querySelector '.sum strong'
 
-    chairView = document.querySelector '.application figure'
+    chairView = document.querySelector '.kalkulator figure'
 
     # zwraca zero, jeśli argument jest pustym stringiem
     num = (str) ->

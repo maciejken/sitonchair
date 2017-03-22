@@ -1,274 +1,223 @@
 
-section.application
+section.kalkulator
     background-color: #f9f9f9
-    padding: 30px 0 50px
+    height: 43rem
+    @include display(flex)
+    align-items: center
+
+    .container
+        @include display(flex)
+        // justify-content: space-between
+        // border: 1px solid red
 
     header
         background-color: inherit
 
         h3
             color: #575757
-            font-size: 18px
+            font-size: 2rem
 
-    header.align_right
-        text-align: right
-
-    .green_bell
-        background-color: #24baa0
-        width: 200px
-        height: 6px
-        display: inline-block
-        margin: 5px 0 5px 0
-
-    .green_button
-        background-color: #27c7ab
-        color: white
-        text-align: center
-        text-transform: uppercase
-        width: 200px
-        padding: 10px 30px
-        font-size: 24px
-        display: inline-block
-        font-family: 'ralewaymedium', Arial, Tahoma, sans-serif
-        margin-top: 20px
-        margin-left: 40px
-        border-radius: 8px
-        text-decoration: none
+        .green_bell
+            background-color: #24baa0
+            width: 23rem
+            height: 0.6rem
+            display: inline-block
+            margin: 0.5rem 0 0.5rem 0
 
 
-section.choice_part
-    float: left
-    width: 280px
-    height: 325px
-    padding: 15px 0 0
-    vertical-align: top
+    section.choice_part
+        @include display(flex)
+        flex-direction: column
+        justify-content: space-between
+        width: 30rem
+        height: 33rem
 
-
-    .form
-        margin-top: 40px
-
-    .drop_down_list
-        border: 1px solid #8de0d2
-        width: 230px
-        height: 42px
-        background-color: white
-        margin-top: 22px
-        padding: 8px 12px
-        position: relative
-        cursor: pointer
-
-
-        .list_label
-            font-size: 20px
-            color: darken(#e2e2e2, 20%)
-            font-family: 'ralewaylight', Arial, Tahoma, sans-serif
-
-            @include unselectable
-
-        .list_arrow
-            width: 0
-            height: 0
-            border-left: 12px solid transparent
-            border-right: 12px solid transparent
-            border-top: 12px solid #24baa0
-            display: block
-            position: absolute
-            right: 14px
-            top: 15px
-            // cursor: pointer
-
-
-        .list_panel
+        .drop_down_list
+            border: 1px solid #8de0d2
+            width: 23rem
+            height: 4.2rem
+            font-size: 2rem
             background-color: white
-            border: 1px solid #ccc
-            width: 230px
-            list-style: none
-            margin: 0
-            left: 0px
-            z-index: 2
-            position: absolute
-            top: 42px
-            display: none
-            padding: 5px 0 5px
+            margin-top: 2rem
+            padding: 0.8rem 1.2rem
+            position: relative
+            cursor: pointer
 
-            li
+            .list_label
+                font-size: 2rem
+                color: darken(#e2e2e2, 20%)
+                font-family: 'ralewaylight', Arial, Tahoma, sans-serif
+
+                @include unselectable
+
+            .list_arrow
+                width: 0
+                height: 0
+                border-left: 1.2rem solid transparent
+                border-right: 1.2rem solid transparent
+                border-top: 1.2rem solid #24baa0
+                display: block
+                position: absolute
+                right: 1.4rem
+                top: 1.5rem
+                // cursor: pointer
+
+
+            .list_panel
+                background-color: white
+                border: 1px solid #ccc
+                width: 23rem
+                list-style: none
+                margin: 0
+                left: 0
+                z-index: 2
+                position: absolute
+                top: 4.2rem
+                display: none
+                padding: 0.5rem 0
+
+                li
+                    cursor: pointer
+                    color: #585858
+                    padding: 0.3rem 0 0.3rem 1.5rem
+
+                    &:hover
+                        background-color: darken(#fff, 10%)
+
+        .checkbox
+            position: relative
+            margin: 3rem 0 0 0
+
+            label
+                display: table
+                position: relative
+                font-size: 2.8rem
+                color: #cecece
+                line-height: 120%
+                padding-top: 1rem
                 cursor: pointer
-                color: #585858
-                padding: 3px 0 3px 15px
+                @include unselectable
 
-                &:hover
-                    background-color: darken(#fff, 10%)
+                .transport
+                    display: table-cell
+                    padding: 0 0 0 1rem
+                    vertical-align: middle
 
-.checkbox
-    position: relative
-    margin: 30px 0 0 0
+            input[type=checkbox]
+                display: none
 
-    label
-        display: table
-        position: relative
-        font-size: 28px
-        color: #cecece
-        line-height: 120%
-        padding-top: 10px
-        cursor: pointer
-        @include unselectable
+            input[type=checkbox] + label span.tick
+                display: table-cell
+                width: 4rem
+                height: 4rem
+                background: #fff
+                cursor: pointer
+                border: 1px solid #4BC3A9
+                border: 1px solid rgba(75,195,169,.75)
 
-        .transport
-            display: table-cell
-            padding: 0 0 0 10px
-            vertical-align: middle
-
-    input[type=checkbox]
-        display: none
-
-    input[type=checkbox] + label span.tick
-        display: table-cell
-        width: 42px
-        height: 42px
-        vertical-align: middle
-        background: #fff
-        cursor: pointer
-        border: 1px solid #4BC3A9
-        border: 1px solid rgba(75,195,169,.75)
-
-    input[type=checkbox]:checked + label span.tick
-        background-image: url('images/form_ok.jpg')
-        -webkit-background-size: 42px
-        background-size: 42px
-        background-position: center
-        background-repeat: no-repeat
+            input[type=checkbox]:checked + label span.tick
+                background-image: url('images/form_ok.jpg')
+                -webkit-background-size: 4rem
+                background-size: 4rem
+                background-position: center
+                background-repeat: no-repeat
 
 
-section.image_part
-    @extend section.choice_part
-    img
-      margin-top: 60px
-      width: 240px
+    section.image_part
+        @extend section.choice_part
+        width: 33rem
+        justify-content: center
 
-section.summary_part
-    @extend section.choice_part
+    section.summary_part
+        @extend section.choice_part
+        align-items: flex-end
 
-    .summary_panel
-        background-color: white
-        width: 100%
-        height: 185px
-        padding: 10px
-        margin-top: 40px
-
-        .panel_left
-            float: left
-            width: 170px
-            vertical-align: top
-            padding-bottom: 10px
-            border-bottom: 1px solid #e7e7e7
-            height: 133px
-
-
-        .panel_right
-            float: left
-            width: 85px
-            border-left: 1px solid #e7e7e7
+        h3
             text-align: right
-            vertical-align: top
-            padding-bottom: 10px
-            border-bottom: 1px solid #e7e7e7
-            height: 133px
+
+        .summary_panel
+            background-color: white
+            width: 100%
+            height: 18.5rem
+            padding: 1rem
+            margin-top: 3rem
+
+            .panel_left
+                float: left
+                width: 19rem
+                padding-bottom: 1rem
+                border-bottom: 1px solid #e7e7e7
+                height: 13.5rem
 
 
-        .panel_left h4 , .panel_right h4
-            color: #24baa0
-            font-size: 22px
+            .panel_right
+                float: left
+                width: 8.5rem
+                border-left: 1px solid #e7e7e7
+                text-align: right
+                vertical-align: top
+                padding-bottom: 1rem
+                border-bottom: 1px solid #e7e7e7
+                height: 13.5rem
 
 
-        .panel_left
-            span
-                font-size: 22px
-                color: #5b5a5a
-                display: block
-                margin-top: 7px
-
-            span.color
-                margin-top: 3px
-
-
-        .panel_right
-            span
-                display: block
-                font-size: 22px
+            .panel_left h4 , .panel_right h4
                 color: #24baa0
-                margin-top: 7px
-
-            span.color.value
-                    margin-top: 3px
-
-        .sum_label
-            display: inline-block
-            width: 170px
-            margin-top: 10px
-            font-size: 22px
-            color: #5b5a5a
+                font-size: 2.2rem
 
 
-        .sum
-            display: inline-block
-            width: 85px
-            text-align: right
-            margin-top: 10px
-            font-size: 22px
-            color: #24baa0
+            .panel_left
+                span
+                    font-size: 2.2rem
+                    color: #5b5a5a
+                    display: block
+                    margin-top: 0.7rem
+
+                span.color
+                    margin-top: 0.3rem
 
 
-        .title
-            height: 30px
+            .panel_right
+                span
+                    display: block
+                    font-size: 2.2rem
+                    color: #24baa0
+                    margin-top: 0.7rem
 
-// .checkbox input
-//   display: block
-//   opacity: 0
-//   height: 48px
-//   position: absolute
-//   width: 48px
-//   cursor: pointer
-//
-//
-// .checkbox label
-//   display: block
-//   padding-left: 65px
-//   position: relative
-//   font-size: 28px
-//   color: #cecece
-//   line-height: 120%
-//   padding-top: 10px
-//   cursor: pointer
-//
-//
-// .checkbox label::before, .checkbox label::after
-//   border: 1px solid #27c7ab
-//   content: ""
-//   display: block
-//   left: 0
-//   height: 48px
-//   position: absolute
-//   width: 48px
-//   top: 0
-//
-// .checkbox label::after
-//   background-image: url("data:image/svg+xmlcharset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center
-//   border: 0
-//   display: none
-//
-//
-// .checkbox input:checked + label::after
-//   display: block
-//
-// .active
-//   background: url('images/form_ok.jpg')
-//   width: 48px
-//   height: 40px
-//
-// .inline_text
-//   display: inline-block
-//   width: 228px
-//   vertical-align: top
-//   margin-top: 30px
-//   margin-left: 15px
-//   color: #aeaeae
+                span.color.value
+                        margin-top: 0.3rem
+
+            .sum_label
+                display: inline-block
+                width: 19rem
+                margin-top: 1rem
+                font-size: 2.2rem
+                color: #5b5a5a
+
+
+            .sum
+                display: inline-block
+                width: 8.5rem
+                text-align: right
+                margin-top: 1rem
+                font-size: 2.2rem
+                color: #24baa0
+
+
+            .title
+                height: 3rem
+
+        .order
+            width: 100%
+            @include display(flex)
+            justify-content: center
+
+            .green_button
+                background-color: #27c7ab
+                color: white
+                width: 20rem
+                padding: 1rem 3rem
+                font-size: 2.4rem
+                margin-top: 2rem
+                border-radius: 0.8rem
+                text-decoration: none
