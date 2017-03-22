@@ -35,7 +35,7 @@
 
 
     .image
-        width: 30rem
+        width: 32rem
         height: 35rem
 
     // background-image: url('../images/black_chair.png')
@@ -53,13 +53,14 @@
         li.visible
             display: block
             float: left
-            width: 469px
-            height: 337px
+            width: 32rem
+            height: 35rem
             overflow: hidden
 
             img
                 position: relative
                 left: -9rem
+                max-width: none
                 @include unselectable
 
 
@@ -67,6 +68,7 @@
         @include display(flex)
         flex-direction: column
         justify-content: center
+        align-items: center
         text-align: center
         width: 40rem
         height: 35rem
@@ -75,8 +77,8 @@
 
 
     .text h1
-        font-size: 36px
-        margin: 5px
+        font-size: 3.6rem
+        // margin: 0 0 1rem
         @include unselectable
 
 
@@ -86,22 +88,21 @@
 
 
     .text p
-        margin: 20px 0 20px
+        margin: 2rem 0
         font-size: 1.8rem
-        line-height: 20px
+        // line-height: 2rem
 
 
     .text a
         display: block
-        margin: 50px
-        width: 200px
-        margin: 20px auto
+        width: 20rem
+        margin: 1rem
         color: white
-        font-size: 18px
+        font-size: 1.8rem
         background-color: #4BC3A9
         text-decoration: none
-        padding: 10px 20px
-        border-radius: 7px
+        padding: 1rem 2rem
+        border-radius: 0.7rem
 
     .text a:hover
         background-color: #2F8E83
