@@ -4,11 +4,15 @@ section.kalkulator
     height: 43rem
     @include display(flex)
     align-items: center
+    // display: none
 
     .container
         @include display(flex)
-        // justify-content: space-between
+        justify-content: space-between
         // border: 1px solid red
+
+        .green_bell
+            width: 23rem
 
     header
         background-color: inherit
@@ -17,24 +21,16 @@ section.kalkulator
             color: #575757
             font-size: 2rem
 
-        .green_bell
-            background-color: #24baa0
-            width: 23rem
-            height: 0.6rem
-            display: inline-block
-            margin: 0.5rem 0 0.5rem 0
-
-
     section.choice_part
         @include display(flex)
         flex-direction: column
         justify-content: space-between
-        width: 30rem
+        width: 33rem
         height: 33rem
 
         .drop_down_list
             border: 1px solid #8de0d2
-            width: 23rem
+            width: 33rem
             height: 4.2rem
             font-size: 2rem
             background-color: white
@@ -127,6 +123,13 @@ section.kalkulator
         @extend section.choice_part
         width: 33rem
         justify-content: center
+
+        figure
+            justify-content: center
+            align-items: center
+
+            img
+                width: 26rem
 
     section.summary_part
         @extend section.choice_part

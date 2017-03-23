@@ -120,9 +120,8 @@ document.addEventListener 'DOMContentLoaded', ->
                             # wyświetla się na środku strony
                             img = chairView.firstElementChild
                             img.setAttribute 'src', j.dataset.image
-                            img.style.width = '100%'
-                            chairView.style.width = '330px'
-                            chairView.style.margin = '-20px 0 0 -55px'
+                            # img.style.width = '100%'
+                            # chairView.style.width = '26rem'
 
                         # przypisanie wybranej opcji do właściwego miejsca
                         # w zestawieniu dzięki zmiennej index

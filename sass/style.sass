@@ -6,7 +6,7 @@
 
 // breakpoints
 $mobile: 500px
-$tablet: 1000px
+$tablet: 1045px
 
 // mobile
 html
@@ -18,6 +18,19 @@ html
     .container
         margin: 0 auto
         width: $tablet
+
+    .flex
+        @include display(flex)
+        justify-content: space-between
+
+    .column
+        flex-direction: column
+
+    .green_bell
+        background-color: #24baa0
+        width: 31rem
+        height: 0.8rem
+        display: inline-block
 
 
 @media screen and (min-width: $tablet)
@@ -32,10 +45,10 @@ html
 
 @import 'partials/section2'
 
-@import 'partials/section3'
+@import 'partials/cennik'
 
 @import 'partials/kalkulator'
 
-@import 'partials/section4'
+@import 'partials/kontakt'
 
 @import 'partials/footer'

@@ -25,9 +25,9 @@
             </nav>
        </div>
    </header>
-   <section id="section1">
-       <div class="container">
-           <div class="prev">&lt;</div>
+   <section id="section1" class="flex column">
+       <div class="container flex">
+           <div class="prev flex">&lt;</div>
            <div class="image">
                <ul>
                    <li class="visible"><img src="assets/sitonchair/images/black_chair.png" alt="black chair"></li>
@@ -42,7 +42,8 @@
                </p>
                <a href="#">ZOBACZ WIĘCEJ</a>
            </div>
-           <div class="next">&gt;</div>
+           <div class="empty-space"></div>
+           <div class="next flex">&gt;</div>
        </div>
    </section>
    <section id="section2">
@@ -68,9 +69,10 @@
            </div>
        </div>
     </section>
-    <section id="section3">
-        <div class="container">
-           <div id="cennik">CENNIK</div>
+    <section id="cennik">
+        <div class="container column">
+           <h2>CENNIK</h2>
+           <span class="green_bell"></span>
         </div>
         <div class="container">
             <div class="box basic">
@@ -155,7 +157,7 @@
    </section>
    <section class="kalkulator">
         <div class="container">
-            <section class="choice_part">
+            <section class="choice_part flex column">
                 <header>
                     <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
                     <span class="green_bell"></span>
@@ -201,7 +203,7 @@
             </section>
 
             <section class="image_part">
-                <figure>
+                <figure class="flex">
                     <img src="assets/sitonchair/images/red_chair.png">
                 </figure>
             </section>
@@ -235,28 +237,31 @@
         </div>
     </section>
 
-    <section id="section4">
-        <div class="container clearfix">
-            <div id="kontakt">KONTAKT</div>
-        </div>
-        <div class="container clearfix">
-            <form action="">
-                <div class="box1">
+    <section id="kontakt">
+        <div class="container flex column">
+            <form class="flex" action="#">
+                <div class="box1 flex column">
+                    <div>
+                        <h3>KONTAKT</h3>
+                        <span class="green_bell"></span>
+                    </div>
+                    <div class="empty-space"></div>
                     <input type="text" name="imie" placeholder="Imię">
                     <input type="email" name="email" placeholder="email">
                     <textarea name="wiadomosc" placeholder="Wiadomość"></textarea>
                 </div>
-                <div class="box2">
+                <div class="box2 flex column">
+                    <div class="empty-space"></div>
                     <img src="assets/sitonchair/images/red_chair.png" alt="red chair">
                     <input type="checkbox" checked name="zgoda" id="zgoda">
-                    <label for="zgoda"><span class="tick"></span><span class="zgoda">Zgadzam się na przetwarzanie danych osobowych</span></label>
+                    <label class="flex" for="zgoda"><span class="tick"></span><div class="zgoda">Zgadzam się na przetwarzanie danych osobowych</div></label>
                     <a href="#">WYŚLIJ</a>
                 </div>
             </form>
         </div>
     </section>
     <footer>
-        <div class="container clearfix">
+        <div class="container flex">
             <div class="copyleft">
                 <span>&copy;</span> Copyleft 2017 | All Rights Reversed - Sit On Chair
             </div>
