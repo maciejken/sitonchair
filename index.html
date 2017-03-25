@@ -7,7 +7,7 @@
     <script src="assets/sitonchair/js/app.js"></script>
 </head>
 <body>
-   <header>
+   <header class="flex">
        <div class="container">
             <div class="logo">SIT <span>ON</span> CHAIR</div>
             <nav>
@@ -25,12 +25,12 @@
             </nav>
        </div>
    </header>
-   <section id="section1" class="flex column">
+   <section id="section1" class="flex">
        <div class="container flex">
            <div class="prev flex">&lt;</div>
            <div class="image">
                <ul>
-                   <li class="visible"><img src="assets/sitonchair/images/black_chair.png" alt="black chair"></li>
+                   <li class="visible"><img src="assets/sitonchair/images/black.png" alt="black chair"></li>
                    <li><img src="assets/sitonchair/images/orange.png" alt="orange chair"></li>
                    <li><img src="assets/sitonchair/images/red.png" alt="red chair"></li>
                </ul>
@@ -46,8 +46,8 @@
            <div class="next flex">&gt;</div>
        </div>
    </section>
-   <section id="section2">
-       <div class="container">
+   <section class="flex" id="section2">
+       <div class="container flex">
            <figure id="chairclair">
                <figcaption>
                    <div>Chair CLAIR</div>
@@ -69,13 +69,13 @@
            </div>
        </div>
     </section>
-    <section id="cennik">
-        <div class="container column">
+    <section class="flex" id="cennik">
+        <div class="container">
            <h2>CENNIK</h2>
            <span class="green_bell"></span>
         </div>
-        <div class="container">
-            <div class="box basic">
+        <div class="container flex">
+            <div class="box">
                 <span class="circle">
                     <span class="dot"></span>
                 </span>
@@ -98,7 +98,7 @@
                 </div>
                 <a href="#">DOŁĄCZ</a>
             </div>
-            <div class="box standard">
+            <div class="box">
                 <span class="circle">
                     <span class="dot"></span>
                 </span>
@@ -124,7 +124,7 @@
                 </div>
                 <a href="#">DOŁĄCZ</a>
             </div>
-            <div class="box advance">
+            <div class="box">
                 <span class="circle">
                     <span class="dot"></span>
                 </span>
@@ -155,7 +155,7 @@
             </div>
        </div>
    </section>
-   <section class="kalkulator">
+   <section class="kalkulator flex">
         <div class="container">
             <section class="choice_part flex column">
                 <header>
@@ -170,7 +170,7 @@
                         <ul class="list_panel">
                             <li data-price="1200" data-image="assets/sitonchair/images/orange.png">Clair</li>
                             <li data-price="1500" data-image="assets/sitonchair/images/red.png">Margarita</li>
-                            <li data-price="1600" data-image="assets/sitonchair/images/black_chair.png">Selena</li>
+                            <li data-price="1600" data-image="assets/sitonchair/images/black.png">Selena</li>
                         </ul>
                     </div>
                     <div class="drop_down_list" id="colors">
@@ -190,9 +190,9 @@
                             <li data-price="500">Skóra</li>
                         </ul>
                     </div>
-                    <div class="checkbox">
-                        <input type="checkbox" id="transport" data-price="80">
-                        <label for="transport">
+                    <div class="checkbox flex">
+                        <label class="flex" for="transport">
+                            <input type="checkbox" class="flex" id="transport" data-price="80">
                             <span class="tick"></span>
                             <span class="transport">Transport</span>
                         </label>
@@ -204,7 +204,7 @@
 
             <section class="image_part">
                 <figure class="flex">
-                    <img src="assets/sitonchair/images/red_chair.png">
+                    <img src="assets/sitonchair/images/red.png">
                 </figure>
             </section>
 
@@ -213,7 +213,7 @@
                     <h3>PODSUMOWANIE</h3>
                     <span class="green_bell"></span>
                 </header>
-
+                <div class="empty-space"></div>
                 <div class="summary_panel">
                     <div class="panel_left">
                         <h4 class="title">Twój fotel</h4>
@@ -263,7 +263,7 @@
             </form>
         </div>
     </section>
-    <footer>
+    <footer class="flex">
         <div class="container flex">
             <div class="copyleft">
                 <span>&copy;</span> Copyleft 2017 | All Rights Reversed - Sit On Chair

@@ -1,7 +1,7 @@
 
 section.kalkulator
     background-color: #f9f9f9
-    height: 43rem
+    height: 50rem
     @include display(flex)
     align-items: center
     // display: none
@@ -26,13 +26,14 @@ section.kalkulator
         flex-direction: column
         justify-content: space-between
         width: 33rem
-        height: 33rem
+        height: 40rem
+        // border: 1px solid red
 
         .drop_down_list
             border: 1px solid #8de0d2
             width: 33rem
-            height: 4.2rem
-            font-size: 2rem
+            height: 6rem
+            font-size: 2.4rem
             background-color: white
             margin-top: 2rem
             padding: 0.8rem 1.2rem
@@ -40,35 +41,36 @@ section.kalkulator
             cursor: pointer
 
             .list_label
-                font-size: 2rem
+                font-size: 2.8rem
                 color: darken(#e2e2e2, 20%)
                 font-family: 'ralewaylight', Arial, Tahoma, sans-serif
+                line-height: 4.4rem
 
                 @include unselectable
 
             .list_arrow
                 width: 0
                 height: 0
-                border-left: 1.2rem solid transparent
-                border-right: 1.2rem solid transparent
-                border-top: 1.2rem solid #24baa0
+                border-left: 1.5rem solid transparent
+                border-right: 1.5rem solid transparent
+                border-top: 1.5rem solid #24baa0
                 display: block
                 position: absolute
-                right: 1.4rem
-                top: 1.5rem
+                right: 2rem
+                top: 2.5rem
                 // cursor: pointer
 
 
             .list_panel
                 background-color: white
                 border: 1px solid #ccc
-                width: 23rem
+                width: 33rem
                 list-style: none
                 margin: 0
                 left: 0
                 z-index: 2
                 position: absolute
-                top: 4.2rem
+                top: 6rem
                 display: none
                 padding: 0.5rem 0
 
@@ -81,40 +83,36 @@ section.kalkulator
                         background-color: darken(#fff, 10%)
 
         .checkbox
-            position: relative
             margin: 3rem 0 0 0
+            // border: 1px solid red
 
             label
-                display: table
-                position: relative
-                font-size: 2.8rem
+                font-size: 3rem
                 color: #cecece
-                line-height: 120%
-                padding-top: 1rem
                 cursor: pointer
                 @include unselectable
 
                 .transport
-                    display: table-cell
                     padding: 0 0 0 1rem
-                    vertical-align: middle
+                    line-height: 5rem
+                    // border: 1px solid red
 
             input[type=checkbox]
                 display: none
 
-            input[type=checkbox] + label span.tick
-                display: table-cell
-                width: 4rem
-                height: 4rem
+            input[type=checkbox] + .tick
+                display: block
+                width: 5rem
+                height: 5rem
                 background: #fff
                 cursor: pointer
                 border: 1px solid #4BC3A9
                 border: 1px solid rgba(75,195,169,.75)
 
-            input[type=checkbox]:checked + label span.tick
+            input[type=checkbox]:checked + .tick
                 background-image: url('images/form_ok.jpg')
                 -webkit-background-size: 4rem
-                background-size: 4rem
+                background-size: 5rem
                 background-position: center
                 background-repeat: no-repeat
 
@@ -125,56 +123,65 @@ section.kalkulator
         justify-content: center
 
         figure
+            height: 100%
+            overflow: hidden
             justify-content: center
             align-items: center
+            // border: 1px solid red
 
             img
-                width: 26rem
+                width: 37rem
                 max-width: none
                 max-height: none
+                margin-left: -2.4rem
                 // height: 23rem
 
     section.summary_part
         @extend section.choice_part
         align-items: flex-end
+        font-size: 2.6rem
 
         h3
             text-align: right
 
+        .empty-space
+            height: 4rem
+
         .summary_panel
             background-color: white
-            width: 100%
-            height: 18.5rem
+            width: 33rem
+            height: 22rem
+            line-height: 3.2rem
             padding: 1rem
-            margin-top: 3rem
 
             .panel_left
                 float: left
-                width: 19rem
+                width: 21rem
                 padding-bottom: 1rem
                 border-bottom: 1px solid #e7e7e7
-                height: 13.5rem
 
 
             .panel_right
                 float: left
-                width: 8.5rem
+                width: 10rem
                 border-left: 1px solid #e7e7e7
                 text-align: right
-                vertical-align: top
+                // vertical-align: top
                 padding-bottom: 1rem
                 border-bottom: 1px solid #e7e7e7
-                height: 13.5rem
+
+            .panel_left, .panel_right
+                height: 16rem
 
 
             .panel_left h4 , .panel_right h4
                 color: #24baa0
-                font-size: 2.2rem
+                // font-size: 2.2rem
 
 
             .panel_left
                 span
-                    font-size: 2.2rem
+                    // font-size: 2.2rem
                     color: #5b5a5a
                     display: block
                     margin-top: 0.7rem
@@ -186,7 +193,7 @@ section.kalkulator
             .panel_right
                 span
                     display: block
-                    font-size: 2.2rem
+                    // font-size: 2.2rem
                     color: #24baa0
                     margin-top: 0.7rem
 
@@ -195,23 +202,23 @@ section.kalkulator
 
             .sum_label
                 display: inline-block
-                width: 19rem
+                width: 21rem
                 margin-top: 1rem
-                font-size: 2.2rem
+                // font-size: 2.2rem
                 color: #5b5a5a
 
 
             .sum
                 display: inline-block
-                width: 8.5rem
+                width: 9rem
                 text-align: right
                 margin-top: 1rem
-                font-size: 2.2rem
+                // font-size: 2.2rem
                 color: #24baa0
 
 
-            .title
-                height: 3rem
+            // .title
+            //     height: 3rem
 
         .order
             width: 100%
