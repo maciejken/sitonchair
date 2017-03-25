@@ -10,24 +10,55 @@
    <header class="flex">
        <div class="container">
             <div class="logo">SIT <span>ON</span> CHAIR</div>
-            <nav>
+            <nav class="flex">
                 <ul>
-                    <li><a href="#">O FIRMIE</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Aktualności</a></li>
-                            <li><a href="#">Nasz team</a></li>
-                            <li><a href="#">Historia</a></li>
+                    <li>
+                        <a class="flex column" href="#">
+                            O FIRMIE
+                            <span class="underline"></span>
+                        </a>
+                        <ul class="dropdown column">
+                            <li>
+                                <a class="flex column" href="#">
+                                    Aktualności
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex column" href="#">
+                                    Nasz team
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex column" href="#">
+                                    Historia
+                                    <span class="underline"></span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="#">GALERIA</a></li>
-                    <li><a href="#">KONTAKT</a></li>
+                    <li>
+                        <a class="flex column" href="#">
+                            GALERIA
+                            <span class="underline"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex column" href="#">
+                            KONTAKT
+                            <span class="underline"></span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
        </div>
    </header>
    <section id="section1" class="flex">
        <div class="container flex">
-           <div class="prev flex">&lt;</div>
+           <div class="prev flex">
+               <span class="left">&lt;</span>
+           </div>
            <div class="image">
                <ul>
                    <li class="visible"><img src="assets/sitonchair/images/black.png" alt="black chair"></li>
@@ -40,10 +71,12 @@
                <p>
                    Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui. non felis. Maecenas malesuada elit lectus felis. malesuada ultricies. Curabitur et ligula. Ut molestie a. ultricies porta urna.
                </p>
-               <a href="#">ZOBACZ WIĘCEJ</a>
+               <a class="flex" href="#">ZOBACZ WIĘCEJ</a>
            </div>
            <div class="empty-space"></div>
-           <div class="next flex">&gt;</div>
+           <div class="next flex">
+               <span class="right">&gt;</span>
+           </div>
        </div>
    </section>
    <section class="flex" id="section2">
@@ -85,16 +118,8 @@
                     <span class="unit">PLN/MSC</span>
                 </div>
                 <div class="table_wrapper">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Zakup towaru + dowóz</td>
-                            </tr>
-                            <tr>
-                                <td>Serwis</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
                 </div>
                 <a href="#">DOŁĄCZ</a>
             </div>
@@ -108,19 +133,9 @@
                     <span class="unit">PLN/MSC</span>
                 </div>
                 <div class="table_wrapper">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Zakup towaru + dowóz</td>
-                            </tr>
-                            <tr>
-                                <td>Serwis</td>
-                            </tr>
-                            <tr>
-                                <td>Gwarancja 5 lat</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <p>Gwarancja 5 lat</p>
                 </div>
                 <a href="#">DOŁĄCZ</a>
             </div>
@@ -134,22 +149,10 @@
                     <span class="unit">PLN/MSC</span>
                 </div>
                 <div class="table_wrapper">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Zakup towaru + dowóz</td>
-                            </tr>
-                            <tr>
-                                <td>Serwis</td>
-                            </tr>
-                            <tr>
-                                <td>Gwarancja 6 lat</td>
-                            </tr>
-                            <tr>
-                                <td>Porady projektanta</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <p>Gwarancja 6 lat</p>
+                    <p>Porady projektanta</p>
                 </div>
                 <a href="#">DOŁĄCZ</a>
             </div>
@@ -231,7 +234,7 @@
                     <div class="sum"><strong>0</strong></div>
                 </div>
                 <div class="order">
-                    <a href="#" class="green_button">ZAMAWIAM</a>
+                    <a href="#" class="green_button flex">ZAMAWIAM</a>
                 </div>
             </section>
         </div>
@@ -258,7 +261,7 @@
                         <span class="tick"></span>
                         <span class="zgoda">Zgadzam się na przetwarzanie danych osobowych</span>
                     </label>
-                    <a href="#">WYŚLIJ</a>
+                    <a class="flex" href="#">WYŚLIJ</a>
                 </div>
             </form>
         </div>

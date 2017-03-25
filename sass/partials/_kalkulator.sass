@@ -45,8 +45,12 @@ section.kalkulator
                 color: darken(#e2e2e2, 20%)
                 font-family: 'ralewaylight', Arial, Tahoma, sans-serif
                 line-height: 4.4rem
+                transition: 0.5s
 
                 @include unselectable
+
+                &:hover
+                    color: lighten(#000, 20%)
 
             .list_arrow
                 width: 0
@@ -95,7 +99,11 @@ section.kalkulator
                 .transport
                     padding: 0 0 0 1rem
                     line-height: 5rem
+                    transition: 0.5s
                     // border: 1px solid red
+
+                    &:hover
+                        color: lighten(#000, 40%)
 
             input[type=checkbox]
                 display: none
@@ -173,15 +181,11 @@ section.kalkulator
             .panel_left, .panel_right
                 height: 16rem
 
-
             .panel_left h4 , .panel_right h4
                 color: #24baa0
-                // font-size: 2.2rem
-
 
             .panel_left
                 span
-                    // font-size: 2.2rem
                     color: #5b5a5a
                     display: block
                     margin-top: 0.7rem
@@ -193,7 +197,6 @@ section.kalkulator
             .panel_right
                 span
                     display: block
-                    // font-size: 2.2rem
                     color: #24baa0
                     margin-top: 0.7rem
 
@@ -204,7 +207,6 @@ section.kalkulator
                 display: inline-block
                 width: 21rem
                 margin-top: 1rem
-                // font-size: 2.2rem
                 color: #5b5a5a
 
 
@@ -217,9 +219,6 @@ section.kalkulator
                 color: #24baa0
 
 
-            // .title
-            //     height: 3rem
-
         .order
             width: 100%
             @include display(flex)
@@ -229,9 +228,17 @@ section.kalkulator
                 background-color: #27c7ab
                 color: white
                 width: 25rem
-                padding: 1rem 3rem
+                height: 5rem
+                justify-content: center
+                align-items: center
+                box-sizing: border-box
                 font-size: 2.4rem
                 margin-top: 2rem
                 border-radius: 0.8rem
                 text-decoration: none
-                text-align: center
+                transition: background 0.5s, color 0.5s
+
+                &:hover
+                    background-color: #fff
+                    color: #24baa0
+                    border: 0.25rem solid #24baa0

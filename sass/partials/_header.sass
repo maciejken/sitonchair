@@ -7,11 +7,10 @@ header
 
     .container
         @include display(flex)
-        align-items: baseline
+        align-items: center
         justify-content: space-between
 
     .logo
-        // float: left
         padding: 1rem 0
         font-size: 2rem
         // border: 1px solid #fff
@@ -22,71 +21,92 @@ header
 
 
     nav
-        // float: right
-        padding: 1rem 0 1rem
         // border: 1px solid #fff
 
         ul:not(.dropdown)
             width: 30rem
+            height: 100%
             @include display(flex)
             justify-content: space-between
-            // position: relative
 
         li
-            display: inline-block
-            // padding: 0 0 0 40px
-
-            &:first-child
-                position: relative
+            @include display(flex)
+            align-items: flex-end
+            height: 4rem
+            padding: 0.5rem
+            // border: 1px solid #fff
+            z-index: 1
+            position: relative
 
         a
             color: #fff
             text-decoration: none
+            justify-content: center
+            align-items: center
+
+            .underline
+                width: 0
+                height: 1px
+                margin-top: 0.5rem
+                background-color: #fff
+                transition: 0.5s
 
             &:hover
-                text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #fff
+                // text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #fff
+
+                .underline
+                    width: 100%
 
 
-header .dropdown
-    display: none
-    position: absolute
-    left: -1.75rem
-    top: 3.75rem
-    list-style-type: none
-    font-family: ralewaymedium
+    .dropdown
+        // display: none
+        height: 0
+        position: absolute
+        left: -1.75rem
+        top: -10rem
+        // top: 3.75rem
+        list-style-type: none
+        font-family: ralewaymedium
+        opacity: 0
+        transition: opacity 1s, top 0s
+
+    .dropdown > li
+        height: auto
+        background-color: #000
+        display: inherit
+        padding: 0.5rem 1.5rem
+        // position: static
+
+        .underline
+            margin-top: 0
 
 
-header .dropdown > li
-    background-color: #000
-    display: inherit
-    padding: 0.5rem 1rem
-    // line-height: 2rem
+    .dropdown > li:first-child
+        padding-top: 1rem
 
 
-header .dropdown > li:first-child
-    padding-top: 1rem
+    .dropdown > li:last-child
+        padding-bottom: 1rem
 
 
-.dropdown > li:last-child
-    padding-bottom: 1rem
+    // black triangle on top of the dropdown menu: it would be rather nice
+    // to make it disappear with a delay (css transitions??) so that it's
+    // easier for the user to click on the dropdown smenu
+    li:hover > .dropdown::before
+        content: ''
+        height: 0
+        width: 0
+        border-top: 1.2rem solid transparent
+        border-left: 1.2rem solid transparent
+        border-bottom: 1.2rem solid black
+        border-right: 1.2rem solid transparent
+        position: absolute
+        top: -2rem
+        left: 3.75rem
 
 
-// black triangle on top of the dropdown menu: it would be rather nice
-// to make it disappear with a delay (css transitions??) so that it's
-// easier for the user to click on the dropdown smenu
-li:hover > .dropdown::before
-    content: ''
-    height: 0
-    width: 0
-    border-top: 1.2rem solid transparent
-    border-left: 1.2rem solid transparent
-    border-bottom: 1.2rem solid black
-    border-right: 1.2rem solid transparent
-    position: absolute
-    top: -2rem
-    left: 3.75rem
-
-
-li:hover > .dropdown
-    @include display(flex)
-    flex-direction: column
+    li:hover > .dropdown
+        @include display(flex)
+        top: 5.25rem
+        height: auto
+        opacity: 1
