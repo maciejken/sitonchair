@@ -21,7 +21,7 @@ footer
         span
             display: block
             transform: rotate(180deg)
-            // transform-origin: 0.5rem 0.75rem
+            transform-origin: 50% 48%
             // padding: 1px 0 0 0
 
     .right
@@ -51,6 +51,17 @@ footer
         display: block
         width: 35px
         height: 35px
+        filter: grayscale(100)
+        opacity: .5
+        position: relative
+        top: 0
+        transition: top 0.25s, opacity 0.5s, filter 0.75s
+
+        &:hover
+            filter: grayscale(0)
+            opacity: 1
+            // transform: scale(1.25)
+            top: -0.5rem
 
     .social-flickr
         background-position: -5px -5px
