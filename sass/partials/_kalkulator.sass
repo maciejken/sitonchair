@@ -49,8 +49,8 @@ section.kalkulator
 
                 @include unselectable
 
-                &:hover
-                    color: lighten(#000, 20%)
+            &:hover .list_label
+                color: lighten(#000, 20%)
 
             .list_arrow
                 width: 0
@@ -62,7 +62,11 @@ section.kalkulator
                 position: absolute
                 right: 2rem
                 top: 2.5rem
+                transition: 0.25s
                 // cursor: pointer
+
+            &:hover .list_arrow
+                top: 3rem
 
 
             .list_panel
